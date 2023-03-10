@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Gentium+Basic:400,400italic,700,700italic);
+
+/*= Fonts
+-------------------------------------- */
+body, input, textarea {
+	font-family:"Merriweather";
+	font-weight:400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family:"Gentium Basic";
+	font-weight:700;
+}
+
+/*= General
+-------------------------------------- */
+body {
+	background:#000;
+}
+
+/* Typography */
+h1 {
+	margin:0;
+	padding-top:3vh;
+	color:#fff;
+	line-height:1em;
+}
+
+a,
+a:link,
+a:visited {
+	color:rgb(249,146,43);
+	text-decoration:none;
+}
+a:hover,
+a:active {
+	color:rgb(249,146,43);
+	text-decoration:underline;
+}
+
+/* Tooltips */
+.has-tooltip {
+	color:#fff;
+	border:none;
+}
+.has-tooltip:hover,
+.has-tooltip:active {
+	color:rgb(249,146,43);
+}
+
+/* Inputs */
+label {
+	padding:5px 0;
+	color:#ccc;
+}
+label:hover,
+label:active {
+	background:transparent;
+}
+
+	input[type="text"],
+	input[type="number"] {
+		background:#121212;
+		border:none;
+		border-radius:3px;
+		box-shadow:inset 0 2px 3px rgba(0,0,0,0.35);
+		color:#fff;
+		transition:all 0.15s !important;
+	}
+	input[type="text"]:focus,
+	input[type="number"]:focus {
+		background:#121212;
+		border:none;
+		box-shadow:inset 0 2px 3px rgba(0,0,0,0.35);
+		text-shadow:0 0 2px rgba(255,255,255,0.35);
+	}
+
+/* Callouts */
+.callout.secondary {
+	background:#222;
+	border:none;
+	border-radius:3px;
+	color:#fff;
+}
+
+	.callout.secondary h4 {
+		color:rgb(249,146,43);
+	}
+
+		.callout.secondary .step-number {
+			display:inline-block;
+			width:28px;
+			height:28px;
+			background:rgb(249,146,43);
+			border-radius:50%;
+			color:#222;
+			text-align:center;
+			line-height:28px;
+
+		}
+
+	.callout.secondary .instructions {
+		font-size:14px;
+		color:#ccc;
+	}
+
+	.callout.secondary img.mana-icon {
+		float:left;
+		width:16px;
+		margin:5px 5px 0 0;
+	}
+
+	.callout.secondary table {
+		overflow:hidden;
+		margin:5px 0;
+		border-radius:3px;
+	}
+
+		.callout.secondary table th,
+		.callout.secondary table td {
+			background:#121212;
+		}
+
+		.callout.secondary table th {
+			color:#ccc;
+			text-align:left;
+			font-size:0.875rem;
+		}
+
+		.callout.secondary table td {
+			min-width:40%;
+		}
+
+			.callout.secondary table img.mana-icon {
+				margin-top:3px;
+			}
+
+/* Header */
+h2.tagline {
+	padding-top:1vh;
+	padding-bottom:3vh;
+	color:#999;
+	font-size:22px;
+	line-height:1em;
+}
+
+.results-modifier {
+	padding-top:3vh;
+}
+
+/* Footer */
+#footer {
+	padding:12px 0;
+	text-align:right;
+	color:#333;
+	font-size:12px;
+}
