@@ -1,0 +1,135 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mana Fixer - Find out how much mana you need.</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+    </head>
+
+    <body>
+        <form>
+            <header id="header">
+                <div class="row">
+                    <div class="large-10 medium-9 columns">
+                        <h1>Mana Fixer</h1>
+                        <h2 class="tagline">Calculate your Magic The Gathering deck's mana requirements!</h2>
+                    </div>
+                    <div class="large-2 medium-3 columns results-modifier">
+                        <label>
+                            Results Modifier <a class="has-tooltip" title="Use to adjust the baseline mana suggestions up or down." data-tooltip><i class="fa fa-question-circle"></i></a>
+                            <input type="number" id="global-modifier" class="input-group-field" step="0.01" value="0.92">
+                        </label>
+                    </div>
+                </div>
+            </header>
+
+            <div class="row">
+                <div class="large-8 medium-6 columns">
+                    <div class="row">
+                        <div class="large-6 columns">
+                            <div id="card-count" class="callout secondary">
+                                <h4><span class="step-number">1</span> Deck Totals</h4>
+                                <p class="instructions">The total number of non-mana cards in your deck, and the total CMC of all non-mana cards.</p>
+                                <label>
+                                    Total Creatures + Spells <a class="has-tooltip" title="Count your total number of non-mana cards." data-tooltip><i class="fa fa-question-circle"></i></a>
+                                    <input type="number" id="cards-total" class="input-group-field" placeholder="0">
+                                </label>
+                                <label>
+                                    Total CMC <a class="has-tooltip" title="Count your total converted mana cost (CMC) of all your cards." data-tooltip><i class="fa fa-question-circle"></i></a>
+                                    <input type="number" id="mana-total" class="input-group-field" placeholder="0">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="large-6 columns">
+                            <div id="mana-cost" class="callout secondary">
+                                <h4><span class="step-number">2</span> Mana Breakdown</h4>
+                                <p class="instructions">The total cost of all your cards for each of your colours.</p>
+                                <label>
+                                    Red
+                                    <input type="number" id="mana-red" class="input-group-field" name="red" placeholder="0">
+                                </label>
+
+                                <label>
+                                    Green
+                                    <input type="number" id="mana-green" class="input-group-field" name="green" placeholder="0">
+                                </label>
+
+                                <label>
+                                    Blue
+                                    <input type="number" id="mana-blue" class="input-group-field" name="blue" placeholder="0">
+                                </label>
+
+                                <label>
+                                    Black
+                                    <input type="number" id="mana-black" class="input-group-field" name="black" placeholder="0">
+                                </label>
+
+                                <label>
+                                    White
+                                    <input type="number" id="mana-white" class="input-group-field" name="white" placeholder="0">
+                                </label>
+
+                                <label>
+                                    Colourless <a class="has-tooltip" title="This is for colourless mana, not generic mana." data-tooltip><i class="fa fa-question-circle"></i></a>
+                                    <input type="number" id="mana-colourless" class="input-group-field" name="colourless" placeholder="0">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="large-4 medium-6 columns">
+                    <div id="results" class="callout secondary">
+                        <h4><span class="step-number">3</span> Results</h4>
+                        <p class="instructions">Use these numbers as a guideline for constructing your deck's mana base.</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Avg CMC Per Card <a class="has-tooltip" title="Your average cost per card. Typical 1v1 decks have an average CMC of about 3 and multiplayer decks about 4." data-tooltip><i class="fa fa-question-circle"></i></a></th>
+                                    <td><span id="result-avgCMC">0</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Total Mana Cards <a class="has-tooltip" title="The suggested total number of mana cards for your deck. Includes basic lands, split lands, fetch lands, etc." data-tooltip><i class="fa fa-question-circle"></i></a></th>
+                                    <td><span id="result-totalMana">0</span></td>
+                                </tr>
+                                <tr>
+                                    Red</th>
+                                    <td><span id="result-totalRed">0</span></td>
+                                </tr>
+                                <tr>
+                                    Green</th>
+                                    <td><span id="result-totalGreen">0</span></td>
+                                </tr>
+                                <tr>
+                                    Blue</th>
+                                    <td><span id="result-totalBlue">0</span></td>
+                                </tr>
+                                <tr>
+                                    Black</th>
+                                    <td><span id="result-totalBlack">0</span></td>
+                                </tr>
+                                <tr>
+                                    White</th>
+                                    <td><span id="result-totalWhite">0</span></td>
+                                </tr>
+                                <tr>
+                                    Colourless</th>
+                                    <td><span id="result-totalColourless">0</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="results-mana"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/vendor/what-input.min.js"></script>
+        <script src="js/vendor/foundation.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
