@@ -15,85 +15,93 @@ h1, h2, h3, h4, h5, h6 {
 /*= General
 -------------------------------------- */
 body {
-	background:#000;
+	background: url(https://www.transparenttextures.com/patterns/noisy.png), #140f01;
 }
 
 /* Typography */
 h1 {
 	margin:0;
 	padding-top:3vh;
-	color:#fff;
+	color:#5d9eb1;
 	line-height:1em;
 }
 
 a,
 a:link,
 a:visited {
-	color:rgb(249,146,43);
+	color:black;
 	text-decoration:none;
 }
 a:hover,
 a:active {
-	color:rgb(249,146,43);
+	color:black;
 	text-decoration:underline;
 }
 
 /* Tooltips */
 .has-tooltip {
-	color:#fff;
+	color:black;
 	border:none;
 }
 .has-tooltip:hover,
 .has-tooltip:active {
-	color:rgb(249,146,43);
+	color:#5d9eb1;
+}
+label.modifier .has-tooltip,
+table .has-tooltip {
+	color: #ccc;
 }
 
 /* Inputs */
 label {
 	padding:5px 0;
-	color:#ccc;
+	color:black;
 }
 label:hover,
 label:active {
 	background:transparent;
 }
+label.modifier {
+	color:#5d9eb1;
+}
 
 	input[type="text"],
 	input[type="number"] {
-		background:#121212;
+		background:#2e2712;
 		border:none;
 		border-radius:3px;
-		box-shadow:inset 0 2px 3px rgba(0,0,0,0.35);
+		box-shadow:inset 0 0px 6px rgb(0 0 0 / 35%);
 		color:#fff;
 		transition:all 0.15s !important;
 	}
 	input[type="text"]:focus,
 	input[type="number"]:focus {
-		background:#121212;
+		background:#2e2712;
 		border:none;
-		box-shadow:inset 0 2px 3px rgba(0,0,0,0.35);
+		box-shadow:inset 0 0px 6px rgb(0 0 0 / 35%);
 		text-shadow:0 0 2px rgba(255,255,255,0.35);
 	}
 
 /* Callouts */
 .callout.secondary {
-	background:#222;
+	background:url(https://www.transparenttextures.com/patterns/noisy.png), #814f23;
 	border:none;
 	border-radius:3px;
+	border: 2px solid #337183;
 	color:#fff;
 }
 
 	.callout.secondary h4 {
-		color:rgb(249,146,43);
+		color:black;
 	}
 
 		.callout.secondary .step-number {
 			display:inline-block;
 			width:28px;
 			height:28px;
-			background:rgb(249,146,43);
+			background:black;
 			border-radius:50%;
-			color:#222;
+			color:#5d9eb1;
 			text-align:center;
 			line-height:28px;
 
@@ -101,7 +109,7 @@ label:active {
 
 	.callout.secondary .instructions {
 		font-size:14px;
-		color:#ccc;
+		color:black;
 	}
 
 	.callout.secondary img.mana-icon {
@@ -118,7 +126,7 @@ label:active {
 
 		.callout.secondary table th,
 		.callout.secondary table td {
-			background:#121212;
+			background:#2e2712;
 		}
 
 		.callout.secondary table th {
@@ -139,7 +147,7 @@ label:active {
 h2.tagline {
 	padding-top:1vh;
 	padding-bottom:3vh;
-	color:#999;
+	color:#337183;
 	font-size:22px;
 	line-height:1em;
 }
